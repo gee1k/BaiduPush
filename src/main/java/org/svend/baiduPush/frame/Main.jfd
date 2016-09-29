@@ -1,0 +1,115 @@
+JFDML JFormDesigner: "5.2.4.0.321" Java: "1.8.0_74" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) {
+			"vgap": 6
+		} ) {
+			name: "this"
+			"minimumSize": new java.awt.Dimension( 850, 550 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "dialogPane"
+				"border": new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
+				"maximumSize": new java.awt.Dimension( 850, 550 )
+				"minimumSize": new java.awt.Dimension( 850, 550 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+					"axis": 1
+				} ) {
+					name: "contentPanel"
+					"maximumSize": new java.awt.Dimension( 850, 550 )
+					"minimumSize": new java.awt.Dimension( 850, 550 )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+						"axis": 1
+					} ) {
+						name: "pushPanel"
+						"maximumSize": new java.awt.Dimension( 850, 300 )
+						"minimumSize": new java.awt.Dimension( 850, 300 )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) ) {
+							name: "sitemapPanel"
+							"maximumSize": new java.awt.Dimension( 850, 35 )
+							"minimumSize": new java.awt.Dimension( 850, 35 )
+							add( new FormComponent( "javax.swing.JRadioButton" ) {
+								name: "radioButton2"
+								"text": "sitemap方式"
+								"maximumSize": new java.awt.Dimension( 100, 300 )
+								"minimumSize": new java.awt.Dimension( 100, 30 )
+							} )
+							add( new FormComponent( "javax.swing.JTextField" ) {
+								name: "textField1"
+								"maximumSize": new java.awt.Dimension( 745, 35 )
+								"minimumSize": new java.awt.Dimension( 745, 35 )
+							} )
+						} )
+						add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) ) {
+							name: "urlPanel"
+							"maximumSize": new java.awt.Dimension( 850, 260 )
+							"minimumSize": new java.awt.Dimension( 850, 260 )
+							add( new FormComponent( "javax.swing.JRadioButton" ) {
+								name: "radioButton3"
+								"text": "填写URL方式"
+								"maximumSize": new java.awt.Dimension( 100, 23 )
+								"minimumSize": new java.awt.Dimension( 100, 23 )
+							} )
+							add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+								name: "scrollPane1"
+								"maximumSize": new java.awt.Dimension( 750, 200 )
+								"minimumSize": new java.awt.Dimension( 750, 200 )
+								"autoscrolls": true
+								add( new FormComponent( "javax.swing.JTextArea" ) {
+									name: "urlTextArea"
+									"columns": 5
+									"maximumSize": new java.awt.Dimension( 850, 200 )
+								} )
+							} )
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+						"axis": 1
+					} ) {
+						name: "consolePanel"
+						"maximumSize": new java.awt.Dimension( 850, 220 )
+						"minimumSize": new java.awt.Dimension( 850, 220 )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label1"
+							"text": "控制台："
+							"nextFocusableComponent": new FormReference( "consoleTextArea" )
+						} )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane2"
+							add( new FormComponent( "javax.swing.JTextArea" ) {
+								name: "consoleTextArea"
+								"maximumSize": new java.awt.Dimension( 850, 300 )
+							} )
+						} )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "0:1.0, 80"
+					"$rowSpecs": "0"
+					"$hGap": 5
+					"$vGap": 5
+				} ) {
+					name: "buttonBar"
+					"border": new javax.swing.border.EmptyBorder( 12, 0, 0, 0 )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "okButton"
+						"text": "OK"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 0
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "South"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 850, 530 )
+		} )
+	}
+}
