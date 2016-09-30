@@ -14,7 +14,6 @@ import java.util.Map;
  */
 public class SitemapParseHelper {
 
-    ConsoleHelper consoleHelper = ConsoleHelper.getInstance();
 
     Document parseToXML(String url) {
         Map<String, String> header = new HashMap<String, String>();
@@ -24,7 +23,6 @@ public class SitemapParseHelper {
         header.put("Content-Type", "text/plain");
         String result = HttpUtils.sendGet(url, "", header);
         if (result == null || result.trim().length() == 0) {
-            consoleHelper.error("获取sitemap失败，请检查sitemap地址是否正确：" + url);
             return null;
         }
 

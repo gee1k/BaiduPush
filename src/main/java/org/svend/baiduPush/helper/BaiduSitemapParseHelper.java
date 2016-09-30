@@ -33,15 +33,11 @@ public class BaiduSitemapParseHelper extends SitemapParseHelper {
         Element rootElement = document.getRootElement();
         List elements = rootElement.elements("url");
         Iterator iterator = elements.iterator();
-
-        consoleHelper.log("----------解析URL开始----------");
         while (iterator.hasNext()) {
             Element element = (Element) iterator.next();
             String loc = element.element("loc").getText();
             list.add(loc);
-            consoleHelper.log(loc);
         }
-        consoleHelper.log("----------解析完成，共{0}条URL记录----------", String.valueOf(list.size()));
         return list.toArray(new String[list.size()]);
     }
 

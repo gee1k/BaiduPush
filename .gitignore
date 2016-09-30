@@ -6,9 +6,6 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
-*.war
-*.ear
 .idea/
 /out/
 BaiduPush.iml
