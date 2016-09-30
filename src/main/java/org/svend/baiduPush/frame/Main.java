@@ -13,10 +13,10 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -48,9 +48,10 @@ public class Main extends JFrame {
     }
 
     private void setConfig(boolean sitemapIsSelectd, String pushAddress, String sitemapAddress, String urls) {
-        OutputStream fos= null;
+        OutputStream fos = null;
         try {
-            fos = new FileOutputStream(this.getClass().getResource("/config.properties").getPath());
+            String relativelyPath = System.getProperty("user.dir");
+            fos = new FileOutputStream(relativelyPath + "\\config.properties");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -82,14 +83,16 @@ public class Main extends JFrame {
         pushUrlTextField.setText("");
         sitemapTextField.setText("");
         urlsArea.setText("");
-        setConfig(false, "","","");
+        setConfig(false, "", "", "");
         log("已重置配置文件！");
     }
 
     private Properties loadProperty() {
         Properties prop = new Properties();
         try {
-            InputStream is = this.getClass().getResourceAsStream("/config.properties");
+            String relativelyPath = System.getProperty("user.dir");
+            FileInputStream is = new FileInputStream(relativelyPath + "\\config.properties");
+//            InputStream is = this.getClass().getResourceAsStream("/config.properties");
             prop.load(is);
             is.close();
         } catch (IOException e) {
